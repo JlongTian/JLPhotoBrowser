@@ -29,3 +29,6 @@
     [photoBrowser show];
 ```
 ![](http://static.oschina.net/uploads/space/2015/1225/102822_gNIt_2547038.png)
+```
+a = b
+```
