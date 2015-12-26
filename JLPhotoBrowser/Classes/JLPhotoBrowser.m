@@ -171,7 +171,7 @@
                     
                 }
                 
-                [UIView animateWithDuration:0.5 animations:^{
+                [UIView animateWithDuration:0.3 animations:^{
                     
                     self.blackView.alpha = 1.0;
                     
@@ -203,7 +203,7 @@
 
 -(void)zonmTap:(UITapGestureRecognizer *)zonmTap{
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         
         UIScrollView *smallScrollView = (UIScrollView *)zonmTap.view.superview;
         smallScrollView.zoomScale = 3.0;
@@ -220,7 +220,7 @@
     
     CGRect frame = [self.originRects[photo.tag] CGRectValue];
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         
         photo.frame = frame;
         self.blackView.alpha = 0;
@@ -235,7 +235,7 @@
 
 -(void)loopTap{
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         
         self.blackView.alpha = 0;
         
