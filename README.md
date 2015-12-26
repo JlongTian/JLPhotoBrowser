@@ -28,5 +28,5 @@
     photoBrowser.currentIndex = (int)tap.view.tag;
     [photoBrowser show];
 ```
-![](https://github.com/Zhangtianlong1990/JLPhotoBrowser/images/show.gif)
+![image](https://github.com/JlongTian/JLPhotoBrowser/images/a.png)
 
