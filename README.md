@@ -1,7 +1,7 @@
 # JLPhotoBrowser
 一款简单的图片浏览器
 用法示例：
-```java
+```Objective-C
     NSMutableArray *photos = [NSMutableArray array];
     
     for (int i=0; i<self.imageViews.count; i++) {
