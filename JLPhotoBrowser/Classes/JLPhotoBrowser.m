@@ -298,6 +298,21 @@
     
     photo.frame = photoF;
     
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale{
+    
+    //如果结束缩放后scale为1时，跟原来的宽高会有些轻微的出入，导致无法滑动，需要将其调整为原来的宽度
+    if (scale == 1.0) {
+        
+        CGSize tempSize = scrollView.contentSize;
+        tempSize.width = ScreenWidth;
+        scrollView.contentSize = tempSize;
+        CGRect tempF = view.frame;
+        tempF.size.width = ScreenWidth;
+        view.frame = tempF;
+        
+    }
     
 }
 
