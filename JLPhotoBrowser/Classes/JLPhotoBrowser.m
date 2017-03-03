@@ -165,8 +165,13 @@
                     CGFloat bigW = ScreenWidth;
                     CGFloat bigH = ScreenWidth*ratio;
                     
-                    photo.bounds = CGRectMake(0, 0, bigW, bigH);
-                    photo.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
+                    if (bigH<ScreenHeight) {
+                        photo.bounds = CGRectMake(0, 0, bigW, bigH);
+                        photo.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
+                    }else{
+                        photo.frame = CGRectMake(0, 0, bigW, bigH);
+                        smallScrollView.contentSize = CGSizeMake(ScreenWidth, bigH);
+                    }
                     
                     
                 }];
