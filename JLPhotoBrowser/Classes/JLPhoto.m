@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        //不裁剪的话，缩放的时候会看到两边多余的部分
         self.clipsToBounds = YES;
         self.userInteractionEnabled  = YES;
         self.contentMode = UIViewContentModeScaleAspectFill;

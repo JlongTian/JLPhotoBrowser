@@ -114,37 +114,20 @@
 
 -(void)setupSmallScrollViews{
     
+    __weak JLPhotoBrowser *weakSelf = self;
+    
     for (int i=0; i<self.photos.count; i++) {
         
-        UIScrollView *smallScrollView = [[UIScrollView alloc] init];
-        smallScrollView.backgroundColor = [UIColor clearColor];
-        smallScrollView.tag = i;
-        smallScrollView.frame = CGRectMake(ScreenWidth*i, 0, ScreenWidth, ScreenHeight);
-        smallScrollView.delegate = self;
-        smallScrollView.maximumZoomScale=3.0;
-        smallScrollView.minimumZoomScale=1;
-        [self.bigScrollView addSubview:smallScrollView];
-        
-        JLPhoto *photo = self.photos[i];
-        UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTap:)];
-        UITapGestureRecognizer *zonmTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zonmTap:)];
-        zonmTap.numberOfTapsRequired = 2;
-        [photo addGestureRecognizer:photoTap];
-        [photo addGestureRecognizer:zonmTap];
-        [photoTap requireGestureRecognizerToFail:zonmTap];
-        
+        UIScrollView *smallScrollView = [self creatSmallScrollView:i];
+        JLPhoto *photo = [self addTapWithTag:i];
         [smallScrollView addSubview:photo];
         
-        SDRotationLoopProgressView *loop = [SDRotationLoopProgressView progressView];
-        loop.tag = i;
-        loop.frame = CGRectMake(0,0 , 80, 80);
-        loop.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
-        loop.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-        loop.hidden = YES;
+        SDRotationLoopProgressView *loop = [self creatLoopWithTag:i];
         [smallScrollView addSubview:loop];
         
         NSURL *bigImgUrl = [NSURL URLWithString:photo.bigImgUrl];
         
+        //检查图片是否已经缓存过
         [[SDImageCache sharedImageCache] queryDiskCacheForKey:photo.bigImgUrl done:^(UIImage *image, SDImageCacheType cacheType) {
             
             if (image==nil) {
@@ -152,17 +135,19 @@
             }
             
         }];
+        
+        
         [photo sd_setImageWithURL:bigImgUrl placeholderImage:nil options:SDWebImageRetryFailed | SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             
             
             
         } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             
-            [loop removeFromSuperview];
-            
             if (image!=nil) {
                 
-                photo.frame = [self.originRects[i] CGRectValue];
+                [loop removeFromSuperview];
+                
+                photo.frame = [weakSelf.originRects[i] CGRectValue];
                 
                 if (cacheType==SDImageCacheTypeNone) {
                     
@@ -173,7 +158,7 @@
                 
                 [UIView animateWithDuration:0.3 animations:^{
                     
-                    self.blackView.alpha = 1.0;
+                    weakSelf.blackView.alpha = 1.0;
                     
                     CGFloat ratio = (double)photo.image.size.height/(double)photo.image.size.width;
                     
@@ -190,14 +175,59 @@
                 
             }else{
                 
-                UITapGestureRecognizer *loopTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loopTap)];
-                [loop addGestureRecognizer:loopTap];
+//                UITapGestureRecognizer *loopTap = [[UITapGestureRecognizer alloc] initWithTarget:weakSelf action:@selector(loopTap)];
+//                [loop addGestureRecognizer:loopTap];
                 
             }
             
         }];
         
     }
+    
+}
+
+- (UIScrollView *)creatSmallScrollView:(int)tag{
+    
+    UIScrollView *smallScrollView = [[UIScrollView alloc] init];
+    smallScrollView.backgroundColor = [UIColor clearColor];
+    smallScrollView.tag = tag;
+    smallScrollView.frame = CGRectMake(ScreenWidth*tag, 0, ScreenWidth, ScreenHeight);
+    smallScrollView.delegate = self;
+    smallScrollView.maximumZoomScale=3.0;
+    smallScrollView.minimumZoomScale=1;
+    [self.bigScrollView addSubview:smallScrollView];
+    
+    return smallScrollView;
+    
+}
+
+- (JLPhoto *)addTapWithTag:(int)tag{
+    
+    JLPhoto *photo = self.photos[tag];
+    UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTap:)];
+    UITapGestureRecognizer *zonmTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zonmTap:)];
+    zonmTap.numberOfTapsRequired = 2;
+    [photo addGestureRecognizer:zonmTap];
+    [photo addGestureRecognizer:photoTap];
+    
+    //zonmTap失败了再执行photoTap，否则zonmTap永远不会被执行
+    [photoTap requireGestureRecognizerToFail:zonmTap];
+    
+    return photo;
+    
+}
+
+- (SDRotationLoopProgressView *)creatLoopWithTag:(int)tag{
+    
+    SDRotationLoopProgressView *loop = [SDRotationLoopProgressView progressView];
+    loop.tag = tag;
+    loop.frame = CGRectMake(0,0 , 80, 80);
+    loop.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
+    loop.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    loop.hidden = YES;
+    UITapGestureRecognizer *loopTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loopTap:)];
+    [loop addGestureRecognizer:loopTap];
+    return loop;
     
 }
 
@@ -214,10 +244,12 @@
 
 -(void)photoTap:(UITapGestureRecognizer *)photoTap{
     
+    //1.将图片缩放回一倍，然后再缩放回原来的frame，否则由于屏幕太小动画直接从3倍缩回去，看不完整
     JLPhoto *photo = (JLPhoto *)photoTap.view;
     UIScrollView *smallScrollView = (UIScrollView *)photo.superview;
     smallScrollView.zoomScale = 1.0;
     
+    //2.再取出原始frame，缩放回去
     CGRect frame = [self.originRects[photo.tag] CGRectValue];
     
     [UIView animateWithDuration:0.3 animations:^{
@@ -233,13 +265,15 @@
     
 }
 
--(void)loopTap{
+-(void)loopTap:(UITapGestureRecognizer *)tap{
     
     [UIView animateWithDuration:0.3 animations:^{
         
         self.blackView.alpha = 0;
+        tap.view.alpha = 0;
         
     }completion:^(BOOL finished) {
+        
         [self removeFromSuperview];
         
     }];
@@ -266,9 +300,7 @@
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     
-    if (scrollView.tag==bigScrollVIewTag) {
-        return nil;
-    }
+    if (scrollView.tag==bigScrollVIewTag) return nil;
     
     JLPhoto *photo = self.photos[scrollView.tag];
     
@@ -277,9 +309,7 @@
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView{
     
-    if (scrollView.tag==bigScrollVIewTag) {
-        return;
-    }
+    if (scrollView.tag==bigScrollVIewTag) return;
     
     JLPhoto *photo = (JLPhoto *)self.photos[scrollView.tag];
     
@@ -335,8 +365,6 @@
         }
         
     }
-    
-    
     
 }
 
