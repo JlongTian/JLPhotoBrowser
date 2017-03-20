@@ -149,19 +149,24 @@
                 //下载回来的图片
                 if (cacheType==SDImageCacheTypeNone) {
                     
-                    [self setupPhotoFrame:photo];
+                    [weakSelf setupPhotoFrame:photo];
                     
                 }else{
                     
                     photo.frame = [weakSelf.originRects[i] CGRectValue];
                     [UIView animateWithDuration:0.3 animations:^{
-                        [self setupPhotoFrame:photo];
+                        [weakSelf setupPhotoFrame:photo];
                     }];
                     
                 }
                 
             }else{
                 
+                //图片下载失败
+                photo.bounds = CGRectMake(0, 0, 240, 240);
+                photo.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
+                photo.contentMode = UIViewContentModeScaleAspectFit;
+                photo.image = [UIImage imageNamed:@"preview_image_failure"];
                 
                 [loop removeFromSuperview];
                 

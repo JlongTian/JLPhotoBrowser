@@ -23,7 +23,7 @@
     
     [super viewDidLoad];
     
-    JLImageListView *imageListView = [[JLImageListView alloc] initWithFrame:CGRectMake(35, 50, 250, ScreenHeight)];
+    JLImageListView *imageListView = [[JLImageListView alloc] initWithFrame:CGRectMake((ScreenWidth-250)/2, 50, 250, ScreenHeight)];
     [self.view addSubview:imageListView];
     
     
