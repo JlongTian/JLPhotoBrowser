@@ -254,7 +254,7 @@
     UIScrollView *smallScrollView = (UIScrollView *)photo.superview;
     smallScrollView.zoomScale = 1.0;
     
-    //1.1如果是长图片先将其移动到CGPointMake(0, 0)在缩放回去
+    //1.1如果是长图片先将其移动到CGPointMake(0, 0)在缩放回去 
     if (CGRectGetHeight(photo.frame)>ScreenHeight) {
         smallScrollView.contentOffset = CGPointMake(0, 0);
     }
