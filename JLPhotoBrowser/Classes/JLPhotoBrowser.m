@@ -15,7 +15,7 @@
 
 #import "JLPhotoBrowser.h"
 #import "UIImageView+WebCache.h"
-#import "SDProgressView.h"
+#import "SDPieProgressView.h"
 
 @interface JLPhotoBrowser()<UIScrollViewDelegate>
 /**
@@ -122,7 +122,7 @@
         JLPhoto *photo = [self addTapWithTag:i];
         [smallScrollView addSubview:photo];
         
-        SDRotationLoopProgressView *loop = [self creatLoopWithTag:i];
+        SDPieProgressView *loop = [self creatLoopWithTag:i];
         [smallScrollView addSubview:loop];
         
         NSURL *bigImgUrl = [NSURL URLWithString:photo.bigImgUrl];
@@ -139,54 +139,57 @@
         
         [photo sd_setImageWithURL:bigImgUrl placeholderImage:nil options:SDWebImageRetryFailed | SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             
-            
+            //设置进度条
+            loop.progress = (CGFloat)receivedSize/(CGFloat)expectedSize;
             
         } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             
             if (image!=nil) {
                 
-                [loop removeFromSuperview];
-                
-                photo.frame = [weakSelf.originRects[i] CGRectValue];
-                
+                //下载回来的图片
                 if (cacheType==SDImageCacheTypeNone) {
                     
-                    photo.frame = CGRectMake(0, 0, ScreenWidth/2, ScreenHeight/2);
-                    photo.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
+                    [self setupPhotoFrame:photo];
+                    
+                }else{
+                    
+                    photo.frame = [weakSelf.originRects[i] CGRectValue];
+                    [UIView animateWithDuration:0.3 animations:^{
+                        [self setupPhotoFrame:photo];
+                    }];
                     
                 }
                 
-                [UIView animateWithDuration:0.3 animations:^{
-                    
-                    weakSelf.blackView.alpha = 1.0;
-                    
-                    CGFloat ratio = (double)photo.image.size.height/(double)photo.image.size.width;
-                    
-                    CGFloat bigW = ScreenWidth;
-                    CGFloat bigH = ScreenWidth*ratio;
-                    
-                    if (bigH<ScreenHeight) {
-                        photo.bounds = CGRectMake(0, 0, bigW, bigH);
-                        photo.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
-                    }else{
-                        photo.frame = CGRectMake(0, 0, bigW, bigH);
-                        smallScrollView.contentSize = CGSizeMake(ScreenWidth, bigH);
-                    }
-                    
-                    
-                }];
-                
-                
-                
             }else{
                 
-//                UITapGestureRecognizer *loopTap = [[UITapGestureRecognizer alloc] initWithTarget:weakSelf action:@selector(loopTap)];
-//                [loop addGestureRecognizer:loopTap];
+                
+                [loop removeFromSuperview];
                 
             }
             
         }];
         
+    }
+    
+}
+
+- (void)setupPhotoFrame:(JLPhoto *)photo{
+    
+    UIScrollView *smallScrollView = (UIScrollView *)photo.superview;
+    
+    self.blackView.alpha = 1.0;
+    
+    CGFloat ratio = (double)photo.image.size.height/(double)photo.image.size.width;
+    
+    CGFloat bigW = ScreenWidth;
+    CGFloat bigH = ScreenWidth*ratio;
+    
+    if (bigH<ScreenHeight) {
+        photo.bounds = CGRectMake(0, 0, bigW, bigH);
+        photo.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
+    }else{//设置长图的frame
+        photo.frame = CGRectMake(0, 0, bigW, bigH);
+        smallScrollView.contentSize = CGSizeMake(ScreenWidth, bigH);
     }
     
 }
@@ -222,9 +225,9 @@
     
 }
 
-- (SDRotationLoopProgressView *)creatLoopWithTag:(int)tag{
+- (SDPieProgressView *)creatLoopWithTag:(int)tag{
     
-    SDRotationLoopProgressView *loop = [SDRotationLoopProgressView progressView];
+    SDPieProgressView *loop = [SDPieProgressView progressView];
     loop.tag = tag;
     loop.frame = CGRectMake(0,0 , 80, 80);
     loop.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);

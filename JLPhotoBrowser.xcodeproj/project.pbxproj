@@ -20,13 +20,6 @@
 		0D4797C91C2C31CA0022198A /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D4797C01C2C31CA0022198A /* 3.jpg */; };
 		0D4797CA1C2C31CA0022198A /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D4797C11C2C31CA0022198A /* 4.jpg */; };
 		0D4797CF1C2C31CA0022198A /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D4797C61C2C31CA0022198A /* 9.jpg */; };
-		0D4797F71C2C32430022198A /* SDBallProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797E91C2C32430022198A /* SDBallProgressView.m */; };
-		0D4797F81C2C32430022198A /* SDBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797EB1C2C32430022198A /* SDBaseProgressView.m */; };
-		0D4797F91C2C32430022198A /* SDLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797ED1C2C32430022198A /* SDLoopProgressView.m */; };
-		0D4797FA1C2C32430022198A /* SDPieLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797EF1C2C32430022198A /* SDPieLoopProgressView.m */; };
-		0D4797FB1C2C32430022198A /* SDPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797F11C2C32430022198A /* SDPieProgressView.m */; };
-		0D4797FC1C2C32430022198A /* SDRotationLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797F41C2C32430022198A /* SDRotationLoopProgressView.m */; };
-		0D4797FD1C2C32430022198A /* SDTransparentPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797F61C2C32430022198A /* SDTransparentPieProgressView.m */; };
 		0D4798201C2C325C0022198A /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4798001C2C325B0022198A /* MKAnnotationView+WebCache.m */; };
 		0D4798211C2C325C0022198A /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4798021C2C325B0022198A /* NSData+ImageContentType.m */; };
 		0D4798221C2C325C0022198A /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4798041C2C325B0022198A /* SDImageCache.m */; };
@@ -49,6 +42,15 @@
 		8903805F1E7F69570006423F /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8903805E1E7F69570006423F /* 7.jpg */; };
 		890380611E7F69FF0006423F /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 890380601E7F69FF0006423F /* 5.jpg */; };
 		890380631E7F6B580006423F /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 890380621E7F6B580006423F /* 8.jpg */; };
+		890380741E7FE8600006423F /* SDBallProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890380661E7FE8600006423F /* SDBallProgressView.m */; };
+		890380751E7FE8600006423F /* SDBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890380681E7FE8600006423F /* SDBaseProgressView.m */; };
+		890380761E7FE8600006423F /* SDLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8903806A1E7FE8600006423F /* SDLoopProgressView.m */; };
+		890380771E7FE8600006423F /* SDPieLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8903806C1E7FE8600006423F /* SDPieLoopProgressView.m */; };
+		890380781E7FE8600006423F /* SDPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8903806E1E7FE8600006423F /* SDPieProgressView.m */; };
+		890380791E7FE8600006423F /* SDRotationLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890380711E7FE8600006423F /* SDRotationLoopProgressView.m */; };
+		8903807A1E7FE8600006423F /* SDTransparentPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890380731E7FE8600006423F /* SDTransparentPieProgressView.m */; };
+		890380DC1E8018130006423F /* preview_image_failure.png in Resources */ = {isa = PBXBuildFile; fileRef = 890380DA1E8018130006423F /* preview_image_failure.png */; };
+		890380DD1E8018130006423F /* preview_image_failure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 890380DB1E8018130006423F /* preview_image_failure@2x.png */; };
 		894C5B411E69107A00B32730 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894C5B401E69107A00B32730 /* 1.jpg */; };
 /* End PBXBuildFile section */
 
@@ -92,21 +94,6 @@
 		0D4797C01C2C31CA0022198A /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		0D4797C11C2C31CA0022198A /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		0D4797C61C2C31CA0022198A /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
-		0D4797E81C2C32430022198A /* SDBallProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBallProgressView.h; sourceTree = "<group>"; };
-		0D4797E91C2C32430022198A /* SDBallProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBallProgressView.m; sourceTree = "<group>"; };
-		0D4797EA1C2C32430022198A /* SDBaseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseProgressView.h; sourceTree = "<group>"; };
-		0D4797EB1C2C32430022198A /* SDBaseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseProgressView.m; sourceTree = "<group>"; };
-		0D4797EC1C2C32430022198A /* SDLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLoopProgressView.h; sourceTree = "<group>"; };
-		0D4797ED1C2C32430022198A /* SDLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLoopProgressView.m; sourceTree = "<group>"; };
-		0D4797EE1C2C32430022198A /* SDPieLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieLoopProgressView.h; sourceTree = "<group>"; };
-		0D4797EF1C2C32430022198A /* SDPieLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieLoopProgressView.m; sourceTree = "<group>"; };
-		0D4797F01C2C32430022198A /* SDPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieProgressView.h; sourceTree = "<group>"; };
-		0D4797F11C2C32430022198A /* SDPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieProgressView.m; sourceTree = "<group>"; };
-		0D4797F21C2C32430022198A /* SDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDProgressView.h; sourceTree = "<group>"; };
-		0D4797F31C2C32430022198A /* SDRotationLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRotationLoopProgressView.h; sourceTree = "<group>"; };
-		0D4797F41C2C32430022198A /* SDRotationLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRotationLoopProgressView.m; sourceTree = "<group>"; };
-		0D4797F51C2C32430022198A /* SDTransparentPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTransparentPieProgressView.h; sourceTree = "<group>"; };
-		0D4797F61C2C32430022198A /* SDTransparentPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTransparentPieProgressView.m; sourceTree = "<group>"; };
 		0D4797FF1C2C325B0022198A /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		0D4798001C2C325B0022198A /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		0D4798011C2C325B0022198A /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -148,6 +135,23 @@
 		8903805E1E7F69570006423F /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		890380601E7F69FF0006423F /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		890380621E7F6B580006423F /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		890380651E7FE8600006423F /* SDBallProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBallProgressView.h; sourceTree = "<group>"; };
+		890380661E7FE8600006423F /* SDBallProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBallProgressView.m; sourceTree = "<group>"; };
+		890380671E7FE8600006423F /* SDBaseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseProgressView.h; sourceTree = "<group>"; };
+		890380681E7FE8600006423F /* SDBaseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseProgressView.m; sourceTree = "<group>"; };
+		890380691E7FE8600006423F /* SDLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLoopProgressView.h; sourceTree = "<group>"; };
+		8903806A1E7FE8600006423F /* SDLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLoopProgressView.m; sourceTree = "<group>"; };
+		8903806B1E7FE8600006423F /* SDPieLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieLoopProgressView.h; sourceTree = "<group>"; };
+		8903806C1E7FE8600006423F /* SDPieLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieLoopProgressView.m; sourceTree = "<group>"; };
+		8903806D1E7FE8600006423F /* SDPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieProgressView.h; sourceTree = "<group>"; };
+		8903806E1E7FE8600006423F /* SDPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieProgressView.m; sourceTree = "<group>"; };
+		8903806F1E7FE8600006423F /* SDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDProgressView.h; sourceTree = "<group>"; };
+		890380701E7FE8600006423F /* SDRotationLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRotationLoopProgressView.h; sourceTree = "<group>"; };
+		890380711E7FE8600006423F /* SDRotationLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRotationLoopProgressView.m; sourceTree = "<group>"; };
+		890380721E7FE8600006423F /* SDTransparentPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTransparentPieProgressView.h; sourceTree = "<group>"; };
+		890380731E7FE8600006423F /* SDTransparentPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTransparentPieProgressView.m; sourceTree = "<group>"; };
+		890380DA1E8018130006423F /* preview_image_failure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_image_failure.png; sourceTree = "<group>"; };
+		890380DB1E8018130006423F /* preview_image_failure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview_image_failure@2x.png"; sourceTree = "<group>"; };
 		894C5B401E69107A00B32730 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +261,8 @@
 		0D4797BD1C2C31CA0022198A /* Imgs */ = {
 			isa = PBXGroup;
 			children = (
+				890380DA1E8018130006423F /* preview_image_failure.png */,
+				890380DB1E8018130006423F /* preview_image_failure@2x.png */,
 				894C5B401E69107A00B32730 /* 1.jpg */,
 				0D4797BF1C2C31CA0022198A /* 2.jpg */,
 				0D4797C01C2C31CA0022198A /* 3.jpg */,
@@ -274,32 +280,10 @@
 		0D4797D01C2C31F40022198A /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				890380641E7FE8600006423F /* SDProgressView */,
 				0D4797FE1C2C325B0022198A /* SDWebImage */,
-				0D4797E71C2C32430022198A /* SDProgressView */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		0D4797E71C2C32430022198A /* SDProgressView */ = {
-			isa = PBXGroup;
-			children = (
-				0D4797E81C2C32430022198A /* SDBallProgressView.h */,
-				0D4797E91C2C32430022198A /* SDBallProgressView.m */,
-				0D4797EA1C2C32430022198A /* SDBaseProgressView.h */,
-				0D4797EB1C2C32430022198A /* SDBaseProgressView.m */,
-				0D4797EC1C2C32430022198A /* SDLoopProgressView.h */,
-				0D4797ED1C2C32430022198A /* SDLoopProgressView.m */,
-				0D4797EE1C2C32430022198A /* SDPieLoopProgressView.h */,
-				0D4797EF1C2C32430022198A /* SDPieLoopProgressView.m */,
-				0D4797F01C2C32430022198A /* SDPieProgressView.h */,
-				0D4797F11C2C32430022198A /* SDPieProgressView.m */,
-				0D4797F21C2C32430022198A /* SDProgressView.h */,
-				0D4797F31C2C32430022198A /* SDRotationLoopProgressView.h */,
-				0D4797F41C2C32430022198A /* SDRotationLoopProgressView.m */,
-				0D4797F51C2C32430022198A /* SDTransparentPieProgressView.h */,
-				0D4797F61C2C32430022198A /* SDTransparentPieProgressView.m */,
-			);
-			path = SDProgressView;
 			sourceTree = "<group>";
 		};
 		0D4797FE1C2C325B0022198A /* SDWebImage */ = {
@@ -340,6 +324,28 @@
 				0D47981F1C2C325C0022198A /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		890380641E7FE8600006423F /* SDProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				890380651E7FE8600006423F /* SDBallProgressView.h */,
+				890380661E7FE8600006423F /* SDBallProgressView.m */,
+				890380671E7FE8600006423F /* SDBaseProgressView.h */,
+				890380681E7FE8600006423F /* SDBaseProgressView.m */,
+				890380691E7FE8600006423F /* SDLoopProgressView.h */,
+				8903806A1E7FE8600006423F /* SDLoopProgressView.m */,
+				8903806B1E7FE8600006423F /* SDPieLoopProgressView.h */,
+				8903806C1E7FE8600006423F /* SDPieLoopProgressView.m */,
+				8903806D1E7FE8600006423F /* SDPieProgressView.h */,
+				8903806E1E7FE8600006423F /* SDPieProgressView.m */,
+				8903806F1E7FE8600006423F /* SDProgressView.h */,
+				890380701E7FE8600006423F /* SDRotationLoopProgressView.h */,
+				890380711E7FE8600006423F /* SDRotationLoopProgressView.m */,
+				890380721E7FE8600006423F /* SDTransparentPieProgressView.h */,
+				890380731E7FE8600006423F /* SDTransparentPieProgressView.m */,
+			);
+			path = SDProgressView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,6 +455,7 @@
 				890380631E7F6B580006423F /* 8.jpg in Resources */,
 				0D4797961C2C2F6E0022198A /* LaunchScreen.storyboard in Resources */,
 				8903805F1E7F69570006423F /* 7.jpg in Resources */,
+				890380DC1E8018130006423F /* preview_image_failure.png in Resources */,
 				0D4797CA1C2C31CA0022198A /* 4.jpg in Resources */,
 				0D4797C81C2C31CA0022198A /* 2.jpg in Resources */,
 				0D4797C91C2C31CA0022198A /* 3.jpg in Resources */,
@@ -457,6 +464,7 @@
 				894C5B411E69107A00B32730 /* 1.jpg in Resources */,
 				890380611E7F69FF0006423F /* 5.jpg in Resources */,
 				0D4797931C2C2F6E0022198A /* Assets.xcassets in Resources */,
+				890380DD1E8018130006423F /* preview_image_failure@2x.png in Resources */,
 				0D4797911C2C2F6E0022198A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,35 +490,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890380791E7FE8600006423F /* SDRotationLoopProgressView.m in Sources */,
 				0D47982A1C2C325C0022198A /* UIImage+GIF.m in Sources */,
 				0D4798351C2C34C60022198A /* JLPhotoBrowser.m in Sources */,
 				0D4797BC1C2C307C0022198A /* JLImageListView.m in Sources */,
 				0D4798281C2C325C0022198A /* SDWebImagePrefetcher.m in Sources */,
-				0D4797FA1C2C32430022198A /* SDPieLoopProgressView.m in Sources */,
 				0D47978E1C2C2F6E0022198A /* ViewController.m in Sources */,
 				0D4798211C2C325C0022198A /* NSData+ImageContentType.m in Sources */,
-				0D4797FD1C2C32430022198A /* SDTransparentPieProgressView.m in Sources */,
-				0D4797F91C2C32430022198A /* SDLoopProgressView.m in Sources */,
 				0D4798291C2C325C0022198A /* UIButton+WebCache.m in Sources */,
 				0D4798261C2C325C0022198A /* SDWebImageDownloaderOperation.m in Sources */,
+				890380741E7FE8600006423F /* SDBallProgressView.m in Sources */,
 				0D4798411C2C372A0022198A /* JLPhoto.m in Sources */,
+				8903807A1E7FE8600006423F /* SDTransparentPieProgressView.m in Sources */,
 				0D4798201C2C325C0022198A /* MKAnnotationView+WebCache.m in Sources */,
 				0D4798231C2C325C0022198A /* SDWebImageCompat.m in Sources */,
 				0D47978B1C2C2F6E0022198A /* AppDelegate.m in Sources */,
 				0D47982B1C2C325C0022198A /* UIImage+MultiFormat.m in Sources */,
 				0D47982E1C2C325C0022198A /* UIImageView+WebCache.m in Sources */,
-				0D4797FB1C2C32430022198A /* SDPieProgressView.m in Sources */,
 				0D47982F1C2C325C0022198A /* UIView+WebCacheOperation.m in Sources */,
-				0D4797F71C2C32430022198A /* SDBallProgressView.m in Sources */,
 				0D4797881C2C2F6E0022198A /* main.m in Sources */,
+				890380751E7FE8600006423F /* SDBaseProgressView.m in Sources */,
 				0D4798251C2C325C0022198A /* SDWebImageDownloader.m in Sources */,
 				0D47982D1C2C325C0022198A /* UIImageView+HighlightedWebCache.m in Sources */,
 				0D4798241C2C325C0022198A /* SDWebImageDecoder.m in Sources */,
 				0D47982C1C2C325C0022198A /* UIImage+WebP.m in Sources */,
 				0D4798271C2C325C0022198A /* SDWebImageManager.m in Sources */,
-				0D4797FC1C2C32430022198A /* SDRotationLoopProgressView.m in Sources */,
-				0D4797F81C2C32430022198A /* SDBaseProgressView.m in Sources */,
+				890380781E7FE8600006423F /* SDPieProgressView.m in Sources */,
+				890380761E7FE8600006423F /* SDLoopProgressView.m in Sources */,
 				0D4798221C2C325C0022198A /* SDImageCache.m in Sources */,
+				890380771E7FE8600006423F /* SDPieLoopProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

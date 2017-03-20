@@ -13,7 +13,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = SDProgressViewBackgroundColor;
+        //self.backgroundColor = SDProgressViewBackgroundColor;
         self.layer.cornerRadius = 5;
         self.clipsToBounds = YES;
     }
@@ -24,11 +24,13 @@
 {
     _progress = progress;
     
-    if (progress >= 1.0) {
-        [self removeFromSuperview];
-    } else {
-        [self setNeedsDisplay];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (progress >= 1.0) {
+            [self removeFromSuperview];
+        } else {
+            [self setNeedsDisplay];
+        }
+    });
     
 }
 
@@ -47,10 +49,10 @@
         CGSize strSize;
         NSAttributedString *attrStr = nil;
         if (attributes[NSFontAttributeName]) {
-            strSize = [text sizeWithAttributes:attributes];
+            strSize = [text sizeWithFont:attributes[NSFontAttributeName]];
             attrStr = [[NSAttributedString alloc] initWithString:text attributes:attributes];
         } else {
-            strSize = [text sizeWithAttributes:attributes];
+            strSize = [text sizeWithFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
             attrStr = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:[UIFont systemFontSize]]}];
         }
         
