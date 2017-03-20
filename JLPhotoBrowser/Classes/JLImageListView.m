@@ -42,8 +42,17 @@
 -(NSMutableArray *)bigImgUrls{
     
     if (_bigImgUrls==nil) {
-        //http://pic26.nipic.com/20130111/11289330_192336233156_2.jpg
-        NSArray *tempUrls = @[@"http://imgsrc.baidu.com/forum/w%3D580/sign=fd6c6565c1cec3fd8b3ea77de689d4b6/3eb24034970a304e61613853d3c8a786c8175c01.jpg",@"http://pic37.nipic.com/20140105/17567471_172229176130_2.jpg",@"http://images.17173.com/2012/news/2012/11/28/2012cpb1128hy33s.jpg",@"http://c.hiphotos.baidu.com/zhidao/pic/item/5ab5c9ea15ce36d3dfdcf9a93af33a87e850b14a.jpg",@"http://pic25.nipic.com/20121126/668573_135748395192_2.jpg",@"http://pic25.nipic.com/20121126/668573_140358155157_2.jpg",@"http://pic25.nipic.com/20121126/668573_151617276125_2.jpg",@"http://pic25.nipic.com/20121201/8761817_195550674000_2.jpg",@"http://5.66825.com/download/pic/000/327/b9fa7606a12d5cd5aa08665e4900eee3.jpg"];
+        
+        NSArray *tempUrls = @[
+                              @"http://imgsrc.baidu.com/forum/w%3D580/sign=fd6c6565c1cec3fd8b3ea77de689d4b6/3eb24034970a304e61613853d3c8a786c8175c01.jpg",
+                              @"http://pic37.nipic.com/20140105/17567471_172229176130_2.jpg",
+                              @"http://images.17173.com/2012/news/2012/11/28/2012cpb1128hy33s.jpg",
+                              @"http://c.hiphotos.baidu.com/zhidao/pic/item/5ab5c9ea15ce36d3dfdcf9a93af33a87e850b14a.jpg",
+                              @"http://pic25.nipic.com/20121126/668573_135748395192_2.jpg",
+                              @"http://pic.5442.com/2013/0106/01/09.jpg",
+                              @"http://www.bz55.com/uploads/allimg/150709/139-150F9164330-50.jpg",
+                              @"http://ww2.sinaimg.cn/large/59a9b7eagw1f0xmliodnkj20u01hcaot.jpg",
+                              @"http://5.66825.com/download/pic/000/327/b9fa7606a12d5cd5aa08665e4900eee3.jpg"];
         
         _bigImgUrls = [NSMutableArray arrayWithArray:tempUrls];
         
