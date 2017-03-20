@@ -48,10 +48,10 @@
                               @"http://pic37.nipic.com/20140105/17567471_172229176130_2.jpg",
                               @"http://images.17173.com/2012/news/2012/11/28/2012cpb1128hy33s.jpg",
                               @"http://c.hiphotos.baidu.com/zhidao/pic/item/5ab5c9ea15ce36d3dfdcf9a93af33a87e850b14a.jpg",
-                              @"http://pic25.nipic.com/20121126/668573_135748395192_2.jpg",
+                              @"http://img15.3lian.com/2015/f3/09/d/102.jpg",
                               @"http://pic.5442.com/2013/0106/01/09.jpg",
-                              @"http://www.bz55.com/uploads/allimg/150709/139-150F9164330-50.jpg",
-                              @"http://ww2.sinaimg.cn/large/59a9b7eagw1f0xmliodnkj20u01hcaot.jpg",
+                              @"http://b.hiphotos.baidu.com/zhidao/pic/item/b90e7bec54e736d18e47675e99504fc2d5626914.jpg",
+                              @"http://d.hiphotos.baidu.com/zhidao/pic/item/267f9e2f07082838e4def51dba99a9014d08f1ec.jpg",
                               @"http://5.66825.com/download/pic/000/327/b9fa7606a12d5cd5aa08665e4900eee3.jpg"];
         
         _bigImgUrls = [NSMutableArray arrayWithArray:tempUrls];
