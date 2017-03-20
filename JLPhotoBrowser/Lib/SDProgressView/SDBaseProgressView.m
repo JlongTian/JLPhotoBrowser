@@ -47,10 +47,10 @@
         CGSize strSize;
         NSAttributedString *attrStr = nil;
         if (attributes[NSFontAttributeName]) {
-            strSize = [text sizeWithFont:attributes[NSFontAttributeName]];
+            strSize = [text sizeWithAttributes:attributes];
             attrStr = [[NSAttributedString alloc] initWithString:text attributes:attributes];
         } else {
-            strSize = [text sizeWithFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+            strSize = [text sizeWithAttributes:attributes];
             attrStr = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:[UIFont systemFontSize]]}];
         }
         
