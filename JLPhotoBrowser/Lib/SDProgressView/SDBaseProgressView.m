@@ -48,13 +48,19 @@
     } else {
         CGSize strSize;
         NSAttributedString *attrStr = nil;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         if (attributes[NSFontAttributeName]) {
-            strSize = [text sizeWithAttributes:attributes];
+
+
+
+            strSize = [text sizeWithFont:attributes[NSFontAttributeName]];
             attrStr = [[NSAttributedString alloc] initWithString:text attributes:attributes];
         } else {
-            strSize = [text sizeWithAttributes:attributes];
+            strSize = [text sizeWithFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
             attrStr = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:[UIFont systemFontSize]]}];
         }
+#pragma clang diagnostic pop
         
         CGFloat strX = xCenter - strSize.width * 0.5;
         CGFloat strY = yCenter - strSize.height * 0.5;
