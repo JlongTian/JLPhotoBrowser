@@ -51,6 +51,7 @@
 		8903807A1E7FE8600006423F /* SDTransparentPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890380731E7FE8600006423F /* SDTransparentPieProgressView.m */; };
 		890380DC1E8018130006423F /* preview_image_failure.png in Resources */ = {isa = PBXBuildFile; fileRef = 890380DA1E8018130006423F /* preview_image_failure.png */; };
 		890380DD1E8018130006423F /* preview_image_failure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 890380DB1E8018130006423F /* preview_image_failure@2x.png */; };
+		8911D2E91E85F2F500E270EC /* Picture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8911D2E81E85F2F500E270EC /* Picture.plist */; };
 		894C5B411E69107A00B32730 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894C5B401E69107A00B32730 /* 1.jpg */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +153,7 @@
 		890380731E7FE8600006423F /* SDTransparentPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTransparentPieProgressView.m; sourceTree = "<group>"; };
 		890380DA1E8018130006423F /* preview_image_failure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview_image_failure.png; sourceTree = "<group>"; };
 		890380DB1E8018130006423F /* preview_image_failure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview_image_failure@2x.png"; sourceTree = "<group>"; };
+		8911D2E81E85F2F500E270EC /* Picture.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Picture.plist; sourceTree = "<group>"; };
 		894C5B401E69107A00B32730 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,7 +215,6 @@
 				0D47978F1C2C2F6E0022198A /* Main.storyboard */,
 				0D4797921C2C2F6E0022198A /* Assets.xcassets */,
 				0D4797941C2C2F6E0022198A /* LaunchScreen.storyboard */,
-				0D4797971C2C2F6E0022198A /* Info.plist */,
 				0D4797861C2C2F6E0022198A /* Supporting Files */,
 			);
 			path = JLPhotoBrowser;
@@ -222,7 +223,9 @@
 		0D4797861C2C2F6E0022198A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D4797971C2C2F6E0022198A /* Info.plist */,
 				0D4797871C2C2F6E0022198A /* main.m */,
+				8911D2E81E85F2F500E270EC /* Picture.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				890380DC1E8018130006423F /* preview_image_failure.png in Resources */,
 				0D4797CA1C2C31CA0022198A /* 4.jpg in Resources */,
 				0D4797C81C2C31CA0022198A /* 2.jpg in Resources */,
+				8911D2E91E85F2F500E270EC /* Picture.plist in Resources */,
 				0D4797C91C2C31CA0022198A /* 3.jpg in Resources */,
 				8903805B1E7F686D0006423F /* 6.jpg in Resources */,
 				0D4797CF1C2C31CA0022198A /* 9.jpg in Resources */,

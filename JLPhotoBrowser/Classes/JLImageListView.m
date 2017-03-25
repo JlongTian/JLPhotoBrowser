@@ -43,17 +43,9 @@
     
     if (_bigImgUrls==nil) {
         
-        NSArray *tempUrls = @[
-                              @"http://imgsrc.baidu.com/forum/w%3D580/sign=fd6c6565c1cec3fd8b3ea77de689d4b6/3eb24034970a304e61613853d3c8a786c8175c01.jpg",
-                              @"http://pic37.nipic.com/20140105/17567471_172229176130_2.jpg",
-                              @"http://images.17173.com/2012/news/2012/11/28/2012cpb1128hy33s.jpg",
-                              @"http://c.hiphotos.baidu.com/zhidao/pic/item/5ab5c9ea15ce36d3dfdcf9a93af33a87e850b14a.jpg",
-                              @"http://img15.3lian.com/2015/f3/09/d/102.jpg",
-                              @"http://pic.5442.com/2013/0106/01/09.jpg",
-                              @"http://b.hiphotos.baidu.com/zhidao/pic/item/b90e7bec54e736d18e47675e99504fc2d5626914.jpg",
-                              @"http://d.hiphotos.baidu.com/zhidao/pic/item/267f9e2f07082838e4def51dba99a9014d08f1ec.jpg",
-                              @"http://5.66825.com/download/pic/000/327/b9fa7606a12d5cd5aa08665e4900eee3.jpg"];
-        
+        // 加载plist中的字典数组
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Picture.plist" ofType:nil];
+        NSArray *tempUrls = [NSArray arrayWithContentsOfFile:path];
         _bigImgUrls = [NSMutableArray arrayWithArray:tempUrls];
         
     }
@@ -93,11 +85,11 @@
         [child addGestureRecognizer:tap];
         
         //3.设置frame
-        // 列数
+        // 3.1 列数
         int column = i%3;
-        // 行数
+        // 3.2 行数
         int row = i/3;
-        // 很据列数和行数算出x、y
+        // 3.3 很据列数和行数算出x、y
         int childX = column * (kStatusImageWidth + kStatusImageMargin);
         int childY = row * (kStatusImageHeight + kStatusImageMargin);
         child.frame = CGRectMake(childX, childY, kStatusImageWidth, kStatusImageHeight);
@@ -114,22 +106,30 @@
 
 -(void)imageTap:(UITapGestureRecognizer *)tap{
     
+    //1.创建JLPhoto数组
     NSMutableArray *photos = [NSMutableArray array];
     
     for (int i=0; i<self.imageViews.count; i++) {
         
         UIImageView *child = self.imageViews[i];
         JLPhoto *photo = [[JLPhoto alloc] init];
+        //1.1设置原始imageView
         photo.sourceImageView = child;
+        //1.2设置大图URL
         photo.bigImgUrl = self.bigImgUrls[i];
+        //1.3设置图片tag
         photo.tag = i;
         [photos addObject:photo];
         
     }
     
-    JLPhotoBrowser *photoBrowser = [[JLPhotoBrowser alloc] init];
+    //2. 创建图片浏览器
+    JLPhotoBrowser *photoBrowser = [JLPhotoBrowser photoBrowser];
+    //2.1 设置JLPhoto数组
     photoBrowser.photos = photos;
+    //2.2 设置当前要显示图片的tag
     photoBrowser.currentIndex = (int)tap.view.tag;
+    //2.3 显示图片浏览器
     [photoBrowser show];
 }
 

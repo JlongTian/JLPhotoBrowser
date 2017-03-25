@@ -22,5 +22,9 @@
  *  显示图片浏览器
  */
 -(void)show;
+/**
+ *  返回图片浏览器
+ */
++ (instancetype)photoBrowser;
 
 @end
