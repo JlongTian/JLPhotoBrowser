@@ -15,7 +15,7 @@
 
 #import "JLPhotoBrowser.h"
 #import "UIImageView+WebCache.h"
-#import "SDPieProgressView.h"
+#import "JLPieProgressView.h"
 
 @interface JLPhotoBrowser()<UIScrollViewDelegate>
 /**
@@ -128,7 +128,7 @@
         JLPhoto *photo = [self addTapWithTag:i];
         [smallScrollView addSubview:photo];
         
-        SDPieProgressView *loop = [self creatLoopWithTag:i];
+        JLPieProgressView *loop = [self creatLoopWithTag:i];
         [smallScrollView addSubview:loop];
         
         NSURL *bigImgUrl = [NSURL URLWithString:photo.bigImgUrl];
@@ -146,7 +146,7 @@
         [photo sd_setImageWithURL:bigImgUrl placeholderImage:nil options:SDWebImageRetryFailed | SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             
             //设置进度条
-            loop.progress = (CGFloat)receivedSize/(CGFloat)expectedSize;
+            loop.progressValue = (CGFloat)receivedSize/(CGFloat)expectedSize;
             
         } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             
@@ -236,9 +236,9 @@
     
 }
 
-- (SDPieProgressView *)creatLoopWithTag:(int)tag{
+- (JLPieProgressView *)creatLoopWithTag:(int)tag{
     
-    SDPieProgressView *loop = [SDPieProgressView progressView];
+    JLPieProgressView *loop = [[JLPieProgressView alloc] init];
     loop.tag = tag;
     loop.frame = CGRectMake(0,0 , 80, 80);
     loop.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
