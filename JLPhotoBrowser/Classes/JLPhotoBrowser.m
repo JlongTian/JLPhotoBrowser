@@ -152,6 +152,8 @@
             
             if (image!=nil) {
                 
+                loop.hidden = YES;
+                
                 //下载回来的图片
                 if (cacheType==SDImageCacheTypeNone) {
                     
