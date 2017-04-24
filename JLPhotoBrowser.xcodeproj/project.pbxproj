@@ -15,7 +15,6 @@
 		0D4797961C2C2F6E0022198A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4797941C2C2F6E0022198A /* LaunchScreen.storyboard */; };
 		0D4797A11C2C2F6E0022198A /* JLPhotoBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797A01C2C2F6E0022198A /* JLPhotoBrowserTests.m */; };
 		0D4797AC1C2C2F6E0022198A /* JLPhotoBrowserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797AB1C2C2F6E0022198A /* JLPhotoBrowserUITests.m */; };
-		0D4797BC1C2C307C0022198A /* JLImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4797BB1C2C307C0022198A /* JLImageListView.m */; };
 		0D4797C91C2C31CA0022198A /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D4797C01C2C31CA0022198A /* 3.jpg */; };
 		0D4797CA1C2C31CA0022198A /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D4797C11C2C31CA0022198A /* 4.jpg */; };
 		0D4797CF1C2C31CA0022198A /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D4797C61C2C31CA0022198A /* 9.jpg */; };
@@ -45,6 +44,7 @@
 		890380DD1E8018130006423F /* preview_image_failure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 890380DB1E8018130006423F /* preview_image_failure@2x.png */; };
 		8911D2E91E85F2F500E270EC /* Picture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8911D2E81E85F2F500E270EC /* Picture.plist */; };
 		89155FA51E8B45F60078A42D /* JLPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89155FA41E8B45F60078A42D /* JLPieProgressView.m */; };
+		893D0FDE1EADECD7005937FD /* JLImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 893D0FDD1EADECD7005937FD /* JLImageListView.m */; };
 		894C5B411E69107A00B32730 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894C5B401E69107A00B32730 /* 1.jpg */; };
 		89E2CE4B1E8DFE390059E3F5 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89E2CE4A1E8DFE390059E3F5 /* 2.jpg */; };
 /* End PBXBuildFile section */
@@ -83,8 +83,6 @@
 		0D4797A71C2C2F6E0022198A /* JLPhotoBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLPhotoBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4797AB1C2C2F6E0022198A /* JLPhotoBrowserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLPhotoBrowserUITests.m; sourceTree = "<group>"; };
 		0D4797AD1C2C2F6E0022198A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D4797BA1C2C307C0022198A /* JLImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLImageListView.h; sourceTree = "<group>"; };
-		0D4797BB1C2C307C0022198A /* JLImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLImageListView.m; sourceTree = "<group>"; };
 		0D4797C01C2C31CA0022198A /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		0D4797C11C2C31CA0022198A /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		0D4797C61C2C31CA0022198A /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
@@ -134,6 +132,8 @@
 		8911D2E81E85F2F500E270EC /* Picture.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Picture.plist; sourceTree = "<group>"; };
 		89155FA31E8B45F60078A42D /* JLPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPieProgressView.h; sourceTree = "<group>"; };
 		89155FA41E8B45F60078A42D /* JLPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPieProgressView.m; sourceTree = "<group>"; };
+		893D0FDC1EADECD7005937FD /* JLImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLImageListView.h; sourceTree = "<group>"; };
+		893D0FDD1EADECD7005937FD /* JLImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLImageListView.m; sourceTree = "<group>"; };
 		894C5B401E69107A00B32730 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		89E2CE4A1E8DFE390059E3F5 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +193,8 @@
 				0D47978A1C2C2F6E0022198A /* AppDelegate.m */,
 				0D47978C1C2C2F6E0022198A /* ViewController.h */,
 				0D47978D1C2C2F6E0022198A /* ViewController.m */,
+				893D0FDC1EADECD7005937FD /* JLImageListView.h */,
+				893D0FDD1EADECD7005937FD /* JLImageListView.m */,
 				0D47978F1C2C2F6E0022198A /* Main.storyboard */,
 				0D4797921C2C2F6E0022198A /* Assets.xcassets */,
 				0D4797941C2C2F6E0022198A /* LaunchScreen.storyboard */,
@@ -234,8 +236,6 @@
 			children = (
 				89155FA31E8B45F60078A42D /* JLPieProgressView.h */,
 				89155FA41E8B45F60078A42D /* JLPieProgressView.m */,
-				0D4797BA1C2C307C0022198A /* JLImageListView.h */,
-				0D4797BB1C2C307C0022198A /* JLImageListView.m */,
 				0D4798331C2C34C60022198A /* JLPhotoBrowser.h */,
 				0D4798341C2C34C60022198A /* JLPhotoBrowser.m */,
 				0D47983F1C2C372A0022198A /* JLPhoto.h */,
@@ -378,7 +378,8 @@
 				TargetAttributes = {
 					0D4797821C2C2F6E0022198A = {
 						CreatedOnToolsVersion = 7.0.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 284357W4SE;
+						ProvisioningStyle = Manual;
 					};
 					0D47979B1C2C2F6E0022198A = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -456,11 +457,11 @@
 			files = (
 				0D47982A1C2C325C0022198A /* UIImage+GIF.m in Sources */,
 				0D4798351C2C34C60022198A /* JLPhotoBrowser.m in Sources */,
-				0D4797BC1C2C307C0022198A /* JLImageListView.m in Sources */,
 				0D4798281C2C325C0022198A /* SDWebImagePrefetcher.m in Sources */,
 				0D47978E1C2C2F6E0022198A /* ViewController.m in Sources */,
 				0D4798211C2C325C0022198A /* NSData+ImageContentType.m in Sources */,
 				0D4798291C2C325C0022198A /* UIButton+WebCache.m in Sources */,
+				893D0FDE1EADECD7005937FD /* JLImageListView.m in Sources */,
 				0D4798261C2C325C0022198A /* SDWebImageDownloaderOperation.m in Sources */,
 				89155FA51E8B45F60078A42D /* JLPieProgressView.m in Sources */,
 				0D4798411C2C372A0022198A /* JLPhoto.m in Sources */,
@@ -620,14 +621,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 284357W4SE;
 				INFOPLIST_FILE = JLPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banggu.JLPhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "49988ee9-0e93-4194-a305-8e00caf4df2b";
+				PROVISIONING_PROFILE_SPECIFIER = ios;
 			};
 			name = Debug;
 		};
@@ -636,12 +637,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 284357W4SE;
 				INFOPLIST_FILE = JLPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.banggu.JLPhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "49988ee9-0e93-4194-a305-8e00caf4df2b";
+				PROVISIONING_PROFILE_SPECIFIER = ios;
 			};
 			name = Release;
 		};
