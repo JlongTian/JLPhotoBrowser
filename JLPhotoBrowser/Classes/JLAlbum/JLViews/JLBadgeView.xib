@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3YG-dM-dCX" customClass="JLBadgeView">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dMj-p0-Fay">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eog-A9-hqg">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dMj-p0-Fay" secondAttribute="bottom" id="C18-yL-OSj"/>
+                <constraint firstItem="Eog-A9-hqg" firstAttribute="leading" secondItem="3YG-dM-dCX" secondAttribute="leading" id="UZi-lq-mT2"/>
+                <constraint firstAttribute="trailing" secondItem="dMj-p0-Fay" secondAttribute="trailing" id="UyF-dT-ch2"/>
+                <constraint firstAttribute="bottom" secondItem="Eog-A9-hqg" secondAttribute="bottom" id="jNu-cf-6bq"/>
+                <constraint firstAttribute="trailing" secondItem="Eog-A9-hqg" secondAttribute="trailing" id="rJf-cq-zlc"/>
+                <constraint firstItem="Eog-A9-hqg" firstAttribute="top" secondItem="3YG-dM-dCX" secondAttribute="top" id="w4q-jt-EdQ"/>
+                <constraint firstItem="dMj-p0-Fay" firstAttribute="leading" secondItem="3YG-dM-dCX" secondAttribute="leading" id="xpb-qk-dvw"/>
+                <constraint firstItem="dMj-p0-Fay" firstAttribute="top" secondItem="3YG-dM-dCX" secondAttribute="top" id="yOu-pt-gqu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="dMj-p0-Fay" id="qCx-LW-bSG"/>
+                <outlet property="label" destination="Eog-A9-hqg" id="O77-FU-i3m"/>
+            </connections>
+            <point key="canvasLocation" x="48" y="127"/>
+        </view>
+    </objects>
+</document>
