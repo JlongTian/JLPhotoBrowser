@@ -46,6 +46,9 @@
 		89155FA51E8B45F60078A42D /* JLPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89155FA41E8B45F60078A42D /* JLPieProgressView.m */; };
 		893D0FDE1EADECD7005937FD /* JLImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 893D0FDD1EADECD7005937FD /* JLImageListView.m */; };
 		894C5B411E69107A00B32730 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894C5B401E69107A00B32730 /* 1.jpg */; };
+		89D3045F1EADFDCD00D58039 /* JLNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D3045E1EADFDCD00D58039 /* JLNetworkViewController.m */; };
+		89D304661EAE017200D58039 /* JLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D304641EAE017200D58039 /* JLAlbumViewController.m */; };
+		89D304671EAE017200D58039 /* JLAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89D304651EAE017200D58039 /* JLAlbumViewController.xib */; };
 		89E2CE4B1E8DFE390059E3F5 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89E2CE4A1E8DFE390059E3F5 /* 2.jpg */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +138,11 @@
 		893D0FDC1EADECD7005937FD /* JLImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLImageListView.h; sourceTree = "<group>"; };
 		893D0FDD1EADECD7005937FD /* JLImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLImageListView.m; sourceTree = "<group>"; };
 		894C5B401E69107A00B32730 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		89D3045D1EADFDCD00D58039 /* JLNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNetworkViewController.h; sourceTree = "<group>"; };
+		89D3045E1EADFDCD00D58039 /* JLNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNetworkViewController.m; sourceTree = "<group>"; };
+		89D304631EAE017200D58039 /* JLAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAlbumViewController.h; sourceTree = "<group>"; };
+		89D304641EAE017200D58039 /* JLAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAlbumViewController.m; sourceTree = "<group>"; };
+		89D304651EAE017200D58039 /* JLAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLAlbumViewController.xib; sourceTree = "<group>"; };
 		89E2CE4A1E8DFE390059E3F5 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +201,11 @@
 				0D47978A1C2C2F6E0022198A /* AppDelegate.m */,
 				0D47978C1C2C2F6E0022198A /* ViewController.h */,
 				0D47978D1C2C2F6E0022198A /* ViewController.m */,
+				89D3045D1EADFDCD00D58039 /* JLNetworkViewController.h */,
+				89D3045E1EADFDCD00D58039 /* JLNetworkViewController.m */,
+				89D304631EAE017200D58039 /* JLAlbumViewController.h */,
+				89D304641EAE017200D58039 /* JLAlbumViewController.m */,
+				89D304651EAE017200D58039 /* JLAlbumViewController.xib */,
 				893D0FDC1EADECD7005937FD /* JLImageListView.h */,
 				893D0FDD1EADECD7005937FD /* JLImageListView.m */,
 				0D47978F1C2C2F6E0022198A /* Main.storyboard */,
@@ -416,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D304671EAE017200D58039 /* JLAlbumViewController.xib in Resources */,
 				890380631E7F6B580006423F /* 8.jpg in Resources */,
 				0D4797961C2C2F6E0022198A /* LaunchScreen.storyboard in Resources */,
 				8903805F1E7F69570006423F /* 7.jpg in Resources */,
@@ -462,10 +476,12 @@
 				0D4798211C2C325C0022198A /* NSData+ImageContentType.m in Sources */,
 				0D4798291C2C325C0022198A /* UIButton+WebCache.m in Sources */,
 				893D0FDE1EADECD7005937FD /* JLImageListView.m in Sources */,
+				89D304661EAE017200D58039 /* JLAlbumViewController.m in Sources */,
 				0D4798261C2C325C0022198A /* SDWebImageDownloaderOperation.m in Sources */,
 				89155FA51E8B45F60078A42D /* JLPieProgressView.m in Sources */,
 				0D4798411C2C372A0022198A /* JLPhoto.m in Sources */,
 				0D4798201C2C325C0022198A /* MKAnnotationView+WebCache.m in Sources */,
+				89D3045F1EADFDCD00D58039 /* JLNetworkViewController.m in Sources */,
 				0D4798231C2C325C0022198A /* SDWebImageCompat.m in Sources */,
 				0D47978B1C2C2F6E0022198A /* AppDelegate.m in Sources */,
 				0D47982B1C2C325C0022198A /* UIImage+MultiFormat.m in Sources */,
