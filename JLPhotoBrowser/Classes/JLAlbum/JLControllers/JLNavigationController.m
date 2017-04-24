@@ -10,7 +10,7 @@
 #import "JLThumbnailViewController.h"
 #import "JLALAssetGroupViewController.h"
 
-@interface JLNavigationController ()<JLReturnImageDelegate>
+@interface JLNavigationController ()
 
 @end
 

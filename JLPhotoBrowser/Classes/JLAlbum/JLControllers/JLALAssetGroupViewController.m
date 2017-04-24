@@ -12,6 +12,7 @@
 #import "JLAssetsLibrary.h"
 #import "JLGroupCell.h"
 #import "JLCommon.h"
+#import "JLNavigationController.h"
 
 @interface JLALAssetGroupViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -110,6 +111,7 @@
     JLAssetGroup *group = self.groups[indexPath.row];
     JLThumbnailViewController *thumbnailVc = [[JLThumbnailViewController alloc] init];
     thumbnailVc.group = group.group;
+    thumbnailVc.delegate = (JLNavigationController *)self.navigationController;
     [self.navigationController pushViewController:thumbnailVc animated:YES];
     
 }

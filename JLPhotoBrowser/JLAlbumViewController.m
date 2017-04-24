@@ -19,14 +19,19 @@
 
 - (IBAction)btnClick:(id)sender {
     
+    //检查相册权限
     [[JLAssetsLibrary shareAssetsLibrary] checkAuthorizationStatus:^(BOOL isAuthorized) {
         
-        if (isAuthorized) {
+        if (isAuthorized) {//允许访问相册
+            
             JLNavigationController *nav = [JLNavigationController navigationAlbumControllerWithDelegate:self];
             [self presentViewController:nav animated:YES completion:NULL];
-        }else{
+            
+        }else{//不允许访问
+            
             UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:@"未能取得相册访问权限" message:nil delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles: nil];
             [alerView show];
+            
         }
         
     }];
@@ -35,6 +40,11 @@
 
 #pragma mark - JLReturnImageDelegate
 
+/**
+ 返回选中的图片数组
+
+ @param imageDatas 图片数组
+ */
 - (void)returnImageDatas:(NSArray *)imageDatas{
     
     [self showImage:imageDatas];

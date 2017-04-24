@@ -10,7 +10,7 @@
 #import "JLAssetsLibrary.h"
 #import "JLReturnImageDelegate.h"
 
-@interface JLNavigationController : UINavigationController
+@interface JLNavigationController : UINavigationController<JLReturnImageDelegate>
 
 @property (nonatomic,weak) id<JLReturnImageDelegate> returnDelegate;
 
