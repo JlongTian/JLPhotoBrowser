@@ -833,7 +833,7 @@
 				INFOPLIST_FILE = JLPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banggu.JLPhotoBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qhxbs.JLPhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "49988ee9-0e93-4194-a305-8e00caf4df2b";
 				PROVISIONING_PROFILE_SPECIFIER = ios;
@@ -849,7 +849,7 @@
 				INFOPLIST_FILE = JLPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.banggu.JLPhotoBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qhxbs.JLPhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "49988ee9-0e93-4194-a305-8e00caf4df2b";
 				PROVISIONING_PROFILE_SPECIFIER = ios;

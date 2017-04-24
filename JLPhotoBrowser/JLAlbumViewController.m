@@ -11,6 +11,8 @@
 
 @interface JLAlbumViewController ()<JLReturnImageDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *showView;
+
 @end
 
 @implementation JLAlbumViewController
@@ -31,9 +33,44 @@
     
 }
 
+#pragma mark - JLReturnImageDelegate
+
 - (void)returnImageDatas:(NSArray *)imageDatas{
     
+    [self showImage:imageDatas];
     
+}
+
+- (void)showImage:(NSArray *)imageDatas{
+    
+    for (UIView *subView in self.showView.subviews) [subView removeFromSuperview];
+    
+    CGFloat imageHW = 80;
+    CGFloat imageMaegin = 5;
+    
+    for (int i = 0; i<imageDatas.count;  i++) {
+        
+        //1.创建imageView
+        UIImageView *child = [[UIImageView alloc] init];
+        child.userInteractionEnabled = YES;
+        child.image = [UIImage imageWithData:imageDatas[i]];
+        child.clipsToBounds = YES;
+        child.contentMode = UIViewContentModeScaleAspectFill;
+        child.tag = i;
+        
+        //3.设置frame
+        // 3.1 列数
+        int column = i%3;
+        // 3.2 行数
+        int row = i/3;
+        // 3.3 很据列数和行数算出x、y
+        int childX = column * (imageHW + imageMaegin);
+        int childY = row * (imageHW + imageMaegin);
+        child.frame = CGRectMake(childX, childY, imageHW, imageHW);
+        
+        [self.showView addSubview:child];
+        
+    }
     
 }
 
