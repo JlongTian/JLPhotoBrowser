@@ -29,9 +29,7 @@
 - (void)setProgressValue:(CGFloat)progressValue{
     
     _progressValue = progressValue;
-    if (self.tag==1) {
-        NSLog(@"%f",progressValue);
-    }
+    
     if (progressValue==1.0) {
         self.hidden = YES;
     }else{
